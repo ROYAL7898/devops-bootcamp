@@ -35,6 +35,11 @@ pipeline {
                echo 'I am in monitoring phase'
             }
         }
+           stage('Refreshing') {
+            steps {
+               echo 'I am in Refreshing Phase'
+            }
+        }    
         stage('Slack Message') {
             steps {
                 slackSend channel: '#devops-alerts',
